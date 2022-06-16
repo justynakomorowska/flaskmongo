@@ -1,0 +1,14 @@
+version: '3'
+services:
+  flask_shop:
+    build: .
+    ports:
+      - "443:5000"
+    env_file: .env
+    restart: always
+  mongo:
+    image: "mongo:4.4.14"
+    env_file: .env
+    restart: always
+    ports:
+      - "27017:27017"

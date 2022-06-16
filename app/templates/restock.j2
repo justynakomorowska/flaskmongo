@@ -1,0 +1,14 @@
+{% extends 'base.j2' %}
+{% import 'macros.j2' as macros %}
+{% block content %}
+<h1> Restock </h1>
+<form method="POST">
+    {{ form.hidden_tag() }}
+    {{ macros.render_field(form.name) }}
+    {{ macros.render_field(form.quantity) }}
+    <div class="buttons">
+      <input type="submit" value="Restock">
+    </div>
+</form>
+
+{% endblock %}
